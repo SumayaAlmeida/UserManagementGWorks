@@ -51,6 +51,7 @@ namespace UserManagementGWorks
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.labelUserInfo = new System.Windows.Forms.Label();
+            this.labelAppName = new System.Windows.Forms.Label();
             this.panelUserInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserImage)).BeginInit();
             this.SuspendLayout();
@@ -131,7 +132,6 @@ namespace UserManagementGWorks
             // 
             // comboBoxGroup
             // 
-           
             this.comboBoxGroup.BackColor = System.Drawing.SystemColors.Control;
             this.comboBoxGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -322,12 +322,25 @@ namespace UserManagementGWorks
             this.labelUserInfo.TabIndex = 18;
             this.labelUserInfo.Text = "User Information :";
             // 
+            // labelAppName
+            // 
+            this.labelAppName.AutoSize = true;
+            this.labelAppName.Font = new System.Drawing.Font("Roboto", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelAppName.ForeColor = System.Drawing.Color.DarkCyan;
+            this.labelAppName.Location = new System.Drawing.Point(38, 0);
+            this.labelAppName.Name = "labelAppName";
+            this.labelAppName.Size = new System.Drawing.Size(391, 44);
+            this.labelAppName.TabIndex = 21;
+            this.labelAppName.Text = "GW User Management";
+            
+            // 
             // AddEditUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(591, 473);
+            this.Controls.Add(this.labelAppName);
             this.Controls.Add(this.labelUserInfo);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);
@@ -367,5 +380,6 @@ namespace UserManagementGWorks
         private System.Windows.Forms.Label labelPassword2;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.Label labelAppName;
     }
 }

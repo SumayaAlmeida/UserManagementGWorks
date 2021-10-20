@@ -13,6 +13,7 @@ using MySql.Data.MySqlClient;
 
 using UserManagementDB;
 
+
 namespace UserManagementGWorks
 {
     public partial class MainForm : Form
@@ -56,33 +57,6 @@ namespace UserManagementGWorks
 
         }
 
-        /*
-        private void buttonConnect_Click(object sender, EventArgs e)
-        {
-            this.db = new DBConnection("localhost", "usermanagement", "csharp", "password");
-
-            if (this.db.OpenConnection())
-            {
-                MessageBox.Show("Connected to database.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void buttonQuery_Click(object sender, EventArgs e)
-        {
-            UsersDB usersDB = new UsersDB();
-
-            List<User> userList = usersDB.GetUsers(this.db);
-
-            string userRecordsMessage = "The users in the database are:\n\n";
-
-            foreach (User user in userList)
-            {
-                userRecordsMessage += $"{user.ToString()}\n\n";
-            }
-
-            MessageBox.Show(userRecordsMessage);
-        }
-        */
         private void buttonAddUser_Click(object sender, EventArgs e)
         {
             AddEditUserForm editUserForm = new AddEditUserForm(this.db, "add");
@@ -166,7 +140,7 @@ namespace UserManagementGWorks
             this.labelGroupText.Text = user.Group;
             this.checkBoxAdmin.Checked = user.IsAdmin;
 
-            
+            // get the root for the project profile images folder + the name of the image  on database image field
             Image userImage = null;
             string workingDirectory = Environment.CurrentDirectory;
             string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
@@ -239,6 +213,15 @@ namespace UserManagementGWorks
             RefreshUserDetails(selectedUser);
             RefreshControls(selectedUser);
         }
+
+        private void labelLogOut_Click(object sender, EventArgs e)
+        {
+            
+            this.Close();
+
+        }
+
+
 
         //addcomment
     }

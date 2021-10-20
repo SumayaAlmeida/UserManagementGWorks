@@ -43,20 +43,20 @@ namespace UserManagementGWorks
             // 
             this.logoLabel.AutoSize = true;
             this.logoLabel.Font = new System.Drawing.Font("Roboto", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.logoLabel.ForeColor = System.Drawing.Color.SteelBlue;
-            this.logoLabel.Location = new System.Drawing.Point(192, 26);
+            this.logoLabel.ForeColor = System.Drawing.Color.DarkCyan;
+            this.logoLabel.Location = new System.Drawing.Point(192, 24);
             this.logoLabel.Name = "logoLabel";
-            this.logoLabel.Size = new System.Drawing.Size(400, 44);
+            this.logoLabel.Size = new System.Drawing.Size(391, 44);
             this.logoLabel.TabIndex = 0;
-            this.logoLabel.Text = "User Management App";
+            this.logoLabel.Text = "GW User Management";
             this.logoLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // UsernameEmailLabel
             // 
             this.UsernameEmailLabel.AutoSize = true;
             this.UsernameEmailLabel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UsernameEmailLabel.ForeColor = System.Drawing.Color.SteelBlue;
-            this.UsernameEmailLabel.Location = new System.Drawing.Point(264, 144);
+            this.UsernameEmailLabel.ForeColor = System.Drawing.Color.DarkCyan;
+            this.UsernameEmailLabel.Location = new System.Drawing.Point(264, 134);
             this.UsernameEmailLabel.Name = "UsernameEmailLabel";
             this.UsernameEmailLabel.Size = new System.Drawing.Size(54, 19);
             this.UsernameEmailLabel.TabIndex = 1;
@@ -68,28 +68,28 @@ namespace UserManagementGWorks
             this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxEmail.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxEmail.Location = new System.Drawing.Point(264, 167);
+            this.textBoxEmail.Location = new System.Drawing.Point(264, 156);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(253, 27);
-            this.textBoxEmail.TabIndex = 1;
+            this.textBoxEmail.TabIndex = 2;
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxPassword.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxPassword.Location = new System.Drawing.Point(264, 225);
+            this.textBoxPassword.Location = new System.Drawing.Point(264, 210);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(253, 27);
-            this.textBoxPassword.TabIndex = 2;
+            this.textBoxPassword.TabIndex = 3;
             // 
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
             this.PasswordLabel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.PasswordLabel.ForeColor = System.Drawing.Color.SteelBlue;
-            this.PasswordLabel.Location = new System.Drawing.Point(264, 203);
+            this.PasswordLabel.ForeColor = System.Drawing.Color.DarkCyan;
+            this.PasswordLabel.Location = new System.Drawing.Point(264, 189);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(85, 19);
             this.PasswordLabel.TabIndex = 3;
@@ -97,14 +97,14 @@ namespace UserManagementGWorks
             // 
             // loginButton
             // 
-            this.loginButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.loginButton.BackColor = System.Drawing.Color.DarkCyan;
             this.loginButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.loginButton.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.loginButton.ForeColor = System.Drawing.Color.White;
-            this.loginButton.Location = new System.Drawing.Point(264, 295);
+            this.loginButton.Location = new System.Drawing.Point(266, 294);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(99, 38);
-            this.loginButton.TabIndex = 3;
+            this.loginButton.Size = new System.Drawing.Size(99, 35);
+            this.loginButton.TabIndex = 4;
             this.loginButton.Text = "Login";
             this.loginButton.UseMnemonic = false;
             this.loginButton.UseVisualStyleBackColor = false;
@@ -115,22 +115,23 @@ namespace UserManagementGWorks
             this.errorLabel.AutoSize = true;
             this.errorLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.errorLabel.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel.Location = new System.Drawing.Point(266, 264);
+            this.errorLabel.Location = new System.Drawing.Point(264, 247);
             this.errorLabel.Name = "errorLabel";
             this.errorLabel.Size = new System.Drawing.Size(89, 15);
             this.errorLabel.TabIndex = 6;
             this.errorLabel.Text = "Error message";
+            this.errorLabel.Visible = false;
             // 
             // exitButton
             // 
-            this.exitButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.exitButton.BackColor = System.Drawing.Color.DarkCyan;
             this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.exitButton.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Location = new System.Drawing.Point(382, 295);
+            this.exitButton.Location = new System.Drawing.Point(384, 294);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(99, 38);
-            this.exitButton.TabIndex = 4;
+            this.exitButton.Size = new System.Drawing.Size(99, 35);
+            this.exitButton.TabIndex = 5;
             this.exitButton.Text = "Exit";
             this.exitButton.UseMnemonic = false;
             this.exitButton.UseVisualStyleBackColor = false;
@@ -138,10 +139,10 @@ namespace UserManagementGWorks
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 420);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.loginButton);
@@ -150,6 +151,7 @@ namespace UserManagementGWorks
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.UsernameEmailLabel);
             this.Controls.Add(this.logoLabel);
+            this.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.ResumeLayout(false);

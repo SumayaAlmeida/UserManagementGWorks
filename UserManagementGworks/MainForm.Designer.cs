@@ -29,6 +29,7 @@ namespace UserManagementGWorks
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonAddUser = new System.Windows.Forms.Button();
@@ -47,11 +48,12 @@ namespace UserManagementGWorks
             this.labelName = new System.Windows.Forms.Label();
             this.editIcon = new System.Windows.Forms.PictureBox();
             this.listBoxUsers = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelLogOut = new System.Windows.Forms.Label();
             this.profileIcon = new System.Windows.Forms.PictureBox();
             this.labelCurrentUserName = new System.Windows.Forms.Label();
             this.labelCurrentUserEmail = new System.Windows.Forms.Label();
             this.panelLoggedInUser = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserImage)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editIcon)).BeginInit();
@@ -86,9 +88,9 @@ namespace UserManagementGWorks
             this.labelAppName.ForeColor = System.Drawing.Color.DarkCyan;
             this.labelAppName.Location = new System.Drawing.Point(35, 37);
             this.labelAppName.Name = "labelAppName";
-            this.labelAppName.Size = new System.Drawing.Size(400, 44);
+            this.labelAppName.Size = new System.Drawing.Size(391, 44);
             this.labelAppName.TabIndex = 5;
-            this.labelAppName.Text = "User Management App";
+            this.labelAppName.Text = "GW User Management";
             // 
             // pictureBoxUserImage
             // 
@@ -233,6 +235,7 @@ namespace UserManagementGWorks
             this.editIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.editIcon.TabIndex = 7;
             this.editIcon.TabStop = false;
+            this.toolTip1.SetToolTip(this.editIcon, "Click to Edit user information");
             this.editIcon.Click += new System.EventHandler(this.editIcon_Click);
             // 
             // listBoxUsers
@@ -246,16 +249,17 @@ namespace UserManagementGWorks
             this.listBoxUsers.TabIndex = 0;
             this.listBoxUsers.SelectedIndexChanged += new System.EventHandler(this.listBoxUsers_SelectedIndexChanged);
             // 
-            // label2
+            // labelLogOut
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label2.Location = new System.Drawing.Point(859, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 19);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Log Out";
+            this.labelLogOut.AutoSize = true;
+            this.labelLogOut.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelLogOut.ForeColor = System.Drawing.Color.DarkCyan;
+            this.labelLogOut.Location = new System.Drawing.Point(859, 58);
+            this.labelLogOut.Name = "labelLogOut";
+            this.labelLogOut.Size = new System.Drawing.Size(65, 19);
+            this.labelLogOut.TabIndex = 13;
+            this.labelLogOut.Text = "Log Out";
+            this.labelLogOut.Click += new System.EventHandler(this.labelLogOut_Click);
             // 
             // profileIcon
             // 
@@ -304,7 +308,7 @@ namespace UserManagementGWorks
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(963, 622);
             this.Controls.Add(this.panelLoggedInUser);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelLogOut);
             this.Controls.Add(this.listBoxUsers);
             this.Controls.Add(this.labelAppName);
             this.Controls.Add(this.buttonAddUser);
@@ -343,11 +347,12 @@ namespace UserManagementGWorks
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.Label labelAdmin;
         private System.Windows.Forms.CheckBox checkBoxAdmin;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelLogOut;
         private System.Windows.Forms.PictureBox profileIcon;
         private System.Windows.Forms.Label labelCurrentUserName;
         private System.Windows.Forms.Label labelCurrentUserEmail;
         private System.Windows.Forms.Panel panelLoggedInUser;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
