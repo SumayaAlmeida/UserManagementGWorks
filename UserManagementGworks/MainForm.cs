@@ -152,7 +152,7 @@ namespace UserManagementGWorks
             }
             else
             {
-                userImage = Image.FromFile(profileDirectory+"user1-01.jpg");
+                userImage = Image.FromFile(profileDirectory+"default.png");
             }
 
             this.pictureBoxUserImage.Image = userImage;
