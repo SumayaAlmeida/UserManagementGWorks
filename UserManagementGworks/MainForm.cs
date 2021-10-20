@@ -152,7 +152,7 @@ namespace UserManagementGWorks
             }
             else
             {
-                userImage = Image.FromFile(@"C:\Users\Sumaya\source\repos\UserManagementGWorks\UserManagementGworks\images\profile\user1-01.jpg");
+                userImage = Image.FromFile(profileDirectory+"user1-01.jpg");
             }
 
             this.pictureBoxUserImage.Image = userImage;

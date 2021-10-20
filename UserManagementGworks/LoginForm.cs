@@ -95,7 +95,7 @@ namespace UserManagementGWorks
                     else
                     {
                         // Case 3
-                        this.errorLabel.Text = $"The user: {this.textBoxEmail.Text} does not exixt. Please try again.";
+                        this.errorLabel.Text = $"The user: {this.textBoxEmail.Text} does not exist. Please try again.";
                         this.errorLabel.Visible = true;
                         //MessageBox.Show($"The user: {this.textBoxEmail.Text} does not exist. Please try again.\n\n(If problems persist, please contact the I.T. department.)", "User not found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }

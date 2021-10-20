@@ -50,6 +50,8 @@ namespace UserManagementGWorks
                 this.textBoxImageLocation.Text = this.editUser.Image;
 
                 // TODO: Call new RefreshProfileImage method
+                string imagePath = getProfileImagesDirectory() + this.textBoxImageLocation.Text;
+                refreshProfileImage(imagePath);
             }
         }
 
@@ -266,8 +268,40 @@ namespace UserManagementGWorks
 
             // Get the filename of the selected image file
             string pictureFilename = browseImageFileDialog.FileName;
+            refreshProfileImage(pictureFilename);
 
+            
+
+            try
+            {
+                File.Copy(pictureFilename, Path.Combine(getProfileImagesDirectory(), Path.GetFileName(pictureFilename)), true);
+                this.textBoxImageLocation.Text = Path.GetFileName(pictureFilename);
+            }
+            catch (FileLoadException )
+            {
+                MessageBox.Show("You image couldn't be loaded.\n Please, contact the IT department");
+            }
+
+
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private string getProfileImagesDirectory()
+        {
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+            string profileDirectory = $"{projectDirectory}\\images\\profile\\";
+
+            return profileDirectory;
+        }
+        private void refreshProfileImage( String pictureFilename)
+        {
             if (File.Exists(pictureFilename))
+
             {
                 // Update PictureBox to display new Image
                 Image userImage = Image.FromFile(pictureFilename);
@@ -286,15 +320,7 @@ namespace UserManagementGWorks
                 }
             }
 
-            File.Copy(pictureFilename, Path.Combine(@"C:\Users\Sumaya\source\repos\UserManagementGWorks\UserManagementGworks\images\profile\", Path.GetFileName(pictureFilename)), true);
-            this.textBoxImageLocation.Text = Path.GetFileName(pictureFilename);
+            
         }
-
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        
     }    
 }
